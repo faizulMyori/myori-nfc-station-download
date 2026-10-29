@@ -33,7 +33,7 @@ The installer adds Microsoft Edge WebView2 if the PC doesn't have it yet.
 
 ## First start
 
-1. **Encryption key.** Enter the 32-character key in the *Encryption key* panel and click
+1. **Encryption key.** Open **View > Settings**, enter the 32-character key and click
    **Save key**. Get the key from your supervisor; it is never shared in this repository. It is
    saved on this PC, so you only enter it once. Until a key is saved, the Writer station stays
    locked.
@@ -43,21 +43,25 @@ The installer adds Microsoft Edge WebView2 if the PC doesn't have it yet.
 
 ### PLC (factory PCs only)
 
-The PLC is off by default. To turn it on, close the app and edit
-`%APPDATA%\my.myori.nfcstation\config.json`:
+The PLC is off by default. To turn it on, open **View > Settings** (Ctrl+3), switch on
+**Use the PLC**, choose the COM port and baud rate, and click **Save and connect**. The app
+connects straight away; the top bar shows the PLC status.
 
-```json
-{ "plc_enabled": true, "plc_port": "COM9", "plc_baud": 9600 }
-```
+### Finding your way around
 
-Set `plc_port` to the COM port the PLC uses, save, and start the app again. The top bar shows the
-PLC status.
+The menu bar at the top of the window switches screens:
+
+- **View > Stations** (Ctrl+1): the four stations and the write settings
+- **View > Sessions** (Ctrl+2): past sessions and Excel downloads
+- **View > Settings** (Ctrl+3): encryption key and PLC
+- **Help**: check for updates, and the app's version
 
 ## Updates
 
-The app checks for a new version every time it starts. When one is available, the button beside
-the logo changes to **Download x.y.z**. Click it, confirm, and the app downloads the update,
-installs it and reopens. You can also click **Check for updates** at any time.
+The app checks for a new version every time it starts, on the opening screen with the logo. When
+one is available it asks **Download and install** or **Not now**; installing downloads the update,
+installs it and reopens the app. After **Not now**, the button beside the logo reads
+**Download x.y.z** so you can install it later. **Help > Check for updates** checks again any time.
 
 Processed tags are saved before updating, so nothing is lost.
 
@@ -67,10 +71,9 @@ Everything stays on the PC, in `%APPDATA%\my.myori.nfcstation\`:
 
 | File | What it holds |
 | --- | --- |
-| `station.db` | the saved encryption key and every processed tag, grouped by session |
-| `config.json` | PLC settings |
+| `station.db` | the encryption key, PLC settings and every processed tag, grouped by session |
 
-Past sessions can be downloaded again as Excel from the **Sessions** panel. If this folder is still
+Past sessions can be downloaded again as Excel from **View > Sessions**. If this folder is still
 there after uninstalling, delete it by hand to remove the data.
 
 ## Uninstall
