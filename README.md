@@ -47,6 +47,10 @@ The PLC is off by default. To turn it on, open **View > Settings** (Ctrl+3), swi
 **Use the PLC**, choose the COM port and baud rate, and click **Save and connect**. The app
 connects straight away; the top bar shows the PLC status.
 
+Under **Signals** you can set the module address and the codes for good tag (default `01`),
+error (`02`) and idle (`00`), to match how your line is wired. The preview shows the exact
+commands, e.g. `@0001`.
+
 ### Finding your way around
 
 The menu bar at the top of the window switches screens:
