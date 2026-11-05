@@ -58,7 +58,14 @@ The menu bar at the top of the window switches screens:
 - **View > Stations** (Ctrl+1): the four stations and the write settings
 - **View > Sessions** (Ctrl+2): past sessions and Excel downloads
 - **View > Settings** (Ctrl+3): encryption key and PLC
+- **View > Logs** (Ctrl+4): why tags failed, PLC problems and other events
 - **Help**: check for updates, and the app's version
+
+### When a tag shows ERR
+
+The row says why, for example "tag removed too early", "no NDEF message on the tag (not written
+yet?)" or "tag is write-protected (already locked?)". **View > Logs** has the full list with the
+time, station and tag, plus PLC problems; **Download log** saves it as a CSV to send to support.
 
 ## Updates
 
